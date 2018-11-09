@@ -1,0 +1,11 @@
+<app-header (navEmitter)="onNavSelected($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="!navSelector; else elseBlock"></app-recipes>
+      <ng-template #elseBlock>
+        <app-shopping-list></app-shopping-list>
+      </ng-template>
+    </div>
+  </div>
+</div>
